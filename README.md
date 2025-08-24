@@ -5,7 +5,7 @@ This repository contains the MATLAB implementation of the **STRQN (Scaled Trust-
 ## How to Run
 
 1. Make sure **all files are in the same directory**.  
-2. Open the file **`roda.m`**.  
+2. Open the file **[`roda.m`](./roda.m)**.  
 3. Set:
    - **`ii=1:30`** → range of test problems to solve.  
    - **`mult=1, mult=2, or mult=3`** → parameter for the initial guess.  
@@ -26,4 +26,3 @@ This repository contains the MATLAB implementation of the **STRQN (Scaled Trust-
 - Only **STRQN variants (SR1, Broyden, BFGS)** are included in this version.
 - All files must be in the same directory for the code to run correctly.
 - Output files and logs will be generated automatically in the working directory.
-
