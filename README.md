@@ -6,29 +6,37 @@ This repository contains the MATLAB implementation of the **STRQN (Scaled Trust-
 
 ## Repository Files / Arquivos do Repositório
 
-- **[`roda.m`](./roda.m)**  
-  Main script to run the test problems. You can select the problem index (`ii=1:30`), the initial guess parameter (`mult=1,2,3`), and the method (`prbteste='teste1','teste2','teste3'`).  
-  Script principal para rodar os problemas-teste. Permite escolher o índice do problema (`ii=1:30`), o parâmetro do chute inicial (`mult=1,2,3`) e o método (`prbteste='teste1','teste2','teste3'`).
+- **[`teste1.m`](./teste1.m)**  
+  Script to run the STRQN method with the **SR1** update.  
+  Script para rodar o método STRQN com atualização **SR1**.
 
-- **[`STRQN_SR1.m`](./STRQN_SR1.m)**  
-  Implements the STRQN method with the **SR1 update**.  
-  Implementa o método STRQN com atualização **SR1**.
+- **[`teste2.m`](./teste2.m)**  
+  Script to run the STRQN method with the **Broyden** update.  
+  Script para rodar o método STRQN com atualização **Broyden**.
 
-- **[`STRQN_Broyden.m`](./STRQN_Broyden.m)**  
-  Implements the STRQN method with the **Broyden update**.  
-  Implementa o método STRQN com atualização **Broyden**.
+- **[`teste3.m`](./teste3.m)**  
+  Script to run the STRQN method with the **BFGS** update.  
+  Script para rodar o método STRQN com atualização **BFGS**.
 
-- **[`STRQN_BFGS.m`](./STRQN_BFGS.m)**  
-  Implements the STRQN method with the **BFGS update**.  
-  Implementa o método STRQN com atualização **BFGS**.
+- **[`BFGS.m`](./BFGS.m)**  
+  Implements the BFGS update used by the STRQN method.  
+  Implementa a atualização BFGS usada pelo método STRQN.
 
-- **[`problems/`](./problems/)**  
-  Directory containing the definitions of the test problems. Each file corresponds to a different nonlinear system.  
-  Diretório contendo a definição dos problemas-teste. Cada arquivo corresponde a um sistema não linear diferente.
+- **[`Broyden.m`](./Broyden.m)**  
+  Implements the Broyden update used by the STRQN method.  
+  Implementa a atualização Broyden usada pelo método STRQN.
 
-- **[`utils/`](./utils/)**  
-  Helper functions used by the STRQN methods and scripts, such as stopping criteria and line search routines.  
-  Funções auxiliares usadas pelos métodos STRQN e scripts, como critérios de parada e rotinas de busca linear.
+- **[`SR1.m`](./SR1.m)**  
+  Implements the SR1 update used by the STRQN method.  
+  Implementa a atualização SR1 usada pelo método STRQN.
+
+- **[`F.m`](./F.m)**  
+  Function evaluator for the nonlinear systems.  
+  Avaliador de funções para os sistemas não lineares.
+
+- **[`lerprob.m`](./lerprob.m)**  
+  Reads and initializes the test problems, providing initial guesses and bounds.  
+  Lê e inicializa os problemas-teste, fornecendo chutes iniciais e limites.
 
 ---
 
@@ -37,8 +45,8 @@ This repository contains the MATLAB implementation of the **STRQN (Scaled Trust-
 1. Make sure **all files are in the same directory**.  
    Certifique-se de que **todos os arquivos estão no mesmo diretório**.
 
-2. Open **[`roda.m`](./roda.m)**.  
-   Abra **[`roda.m`](./roda.m)**.
+2. Open **`roda.m`**.  
+   Abra **`roda.m`**.
 
 3. Set parameters:
    - **`ii=1:30`** → range of test problems to solve / intervalo dos problemas-teste.
